@@ -6,7 +6,7 @@
 #'@param y The response
 #'@param X The covariate
 #'@param size subsample size of leveraging
-#'@param draws Number of draws/repetition of leveraging
+#'@param draws Number of draws/repetition of leveraging. Default value is 1.
 #'@param method The method to implement, can be weighted leveraging and uniform
 #'leveraging. Default is "uniform". Details of the difference of the
 #'
@@ -15,7 +15,7 @@
 #'@author Yixiao Lin
 #'
 #'@export
-algo_leverage <- function(y,X,size,draws,method ="uniform"){
+algo_leverage <- function(y,X,size,draws=1,method ="uniform"){
 
   ### Check
 
