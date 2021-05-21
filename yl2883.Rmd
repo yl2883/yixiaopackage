@@ -119,15 +119,6 @@ beta
 ```
 
 
-We can form path plots for the elastic net model with $\alpha=0.5$ (You should run the helper function given in below chunk first):
-```{r fig.align="center"}
-res=SolPath(X,Y,alpha=0.5,n,p)
-betas=res$betas
-norms=colSums(abs(betas))
-matplot(norms,t(betas),xlab='l1 norm', ylab='coefficient',type='l')
-```
-
-
 Here is the helper function to obtain a solution path.
 ```{r}
 SolPath=function(X,Y,alpha,n,p){
@@ -144,6 +135,17 @@ SolPath=function(X,Y,alpha,n,p){
   return (list(betas=betas, lambdas=ls))
 }
 ```
+
+
+We can form path plots for the elastic net model with $\alpha=0.5$ (You should run the helper function given in above chunk first):
+```{r fig.align="center"}
+res=SolPath(X,Y,alpha=0.5,n,p)
+betas=res$betas
+norms=colSums(abs(betas))
+matplot(norms,t(betas),xlab='l1 norm', ylab='coefficient',type='l')
+```
+
+
 
 If you are interested in the full list of parameters, check `?yl2883::elnet_coord` for more details  
 

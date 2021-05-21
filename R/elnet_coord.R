@@ -59,7 +59,8 @@ elnet_coord <- function(y,X, beta, alpha,lambda, maxit= 10000, tol = 1e-6){
 #'@param X The covariate
 #'@param Y The response
 #'@param beta The initialization of the coeffient.
-#'@param alpha Elastic net parameter, 0<=alpha<=1
+#'@param alpha Elastic net hyperparameter that controls how much of each of
+#' the L1 and L2 penalties are involved. 0<=alpha<=1
 #'@param lambda Regularization parameter
 #'@param n numbers of rows of X
 #'@param p numbers of rows of Y
