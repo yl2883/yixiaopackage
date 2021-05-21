@@ -101,8 +101,10 @@ If you are interested in the full list of parameters, check `?yl2883::algo_lever
 
 # coordinate descent Elastic Net
 
-The last functional in the yl2883 package fits elastic net to data using coordinate descent algorithm.. Recall elastic net solves the optimization problem 
-$$\min_{\beta \in \mathbb{R}^p} \frac{1}{2n} (y - X\beta)^T (y - X\beta) + \lambda \left[ \frac{1}{2} (1 - \alpha) \beta^T \beta + \alpha ||\beta||_1 \right]$$. Given covariate matrix $X$ and response vector $y$, the function `yl2883::elnet_coord` solves exactly the problem:
+The last functional in the yl2883 package fits elastic net to data using coordinate descent algorithm. Recall elastic net solves the optimization problem 
+$$\min_{\beta \in \mathbb{R}^p} \frac{1}{2n} (y - X\beta)^T (y - X\beta) + \lambda \left[ \frac{1}{2} (1 - \alpha) \beta^T \beta + \alpha ||\beta||_1 \right]$$
+
+Given covariate matrix $X$ and response vector $y$, the function `yl2883::elnet_coord` solves exactly the problem:
 ```{r}
 library(mvtnorm)
 p=20
