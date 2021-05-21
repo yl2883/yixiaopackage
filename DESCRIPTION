@@ -1,0 +1,20 @@
+Package: yl2883
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Authors@R:
+    person("Yixiao", "Lin", email = "yl2883@cornell.edu", role = c("aut", "cre"))
+Description: solveols():  solves a linear system using Gauss-Seidel or Jacobi method, 
+    allows user to specifyhow many cores to use for parallel implementation.
+    algoleverage():   implements  algorithmic  leveraging  for  linear  regression  
+    using  uniform  andleverage score based subsampling of rows.
+    elnetcoord():  fits elastic net to data using coordinate descent algorithm.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Depends:
+    matrixStats,
+    Matrix,
+    doParallel
+    
