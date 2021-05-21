@@ -1,7 +1,6 @@
 # yl2883
 
-A package with codes that solve HW1 for BTRY 6520: Computationally Intensive Statistical Methods.  To install this package, 
-use the devtools library to install via 
+A package with codes that solve HW1 for BTRY 6520.  You can install this package via 
 
 ```r
 library("devtools")
