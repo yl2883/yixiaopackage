@@ -12,7 +12,7 @@
 #'@return the leveraged coefficient that fits the linear regression
 #'@author Yixiao Lin
 #'@export
-algo_leverage <- function(y,X,size,draws=1,method ="uniform"){
+algo_leverage <- function(y,X,size=10,draws=1,method ="uniform"){
 
   ### Check
 
@@ -21,15 +21,6 @@ algo_leverage <- function(y,X,size,draws=1,method ="uniform"){
   if (length(y) != n){
     warning("variable lengths differ")
   }
-
-  if (size%%1 != 0 || size<=0 || is.na(size) ){
-    warning("size is invalid")
-  }
-
-  if (draws%%1 != 0 || draws<=0 || is.na(draws) ){
-    warning("draws is invalid")
-  }
-
 
   if (method == "uniform"|| method  == "weighted"){
     if (method == "uniform"){
