@@ -64,7 +64,7 @@ lev_subsample= function(y,X,r,Pi,draws) {
     index=sample(1:n, size = r, replace = T,prob=Pi)
     Xstar=X[index,]
     Ystar=Y[index]
-    Phi=1/ (Pi[index]^{1/2})
+    Phi=1/ (r*Pi[index]^{1/2})
     model <- lm(Ystar ~ 0 + Xstar, weights=Phi)
     beta.hat=as.numeric(model$coefficients)
     beta[i,]=beta.hat
